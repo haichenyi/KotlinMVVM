@@ -65,7 +65,8 @@ dependencies {
 
     implementation 'org.conscrypt:conscrypt-android:2.2.1'
 
-    implementation "org.permissionsdispatcher:permissionsdispatcher:4.6.0"
-    kapt "org.permissionsdispatcher:permissionsdispatcher-processor:4.6.0"
+    def permission = "4.6.0"
+    implementation "org.permissionsdispatcher:permissionsdispatcher:$permission"
+    kapt "org.permissionsdispatcher:permissionsdispatcher-processor:$permission"
 
 }
