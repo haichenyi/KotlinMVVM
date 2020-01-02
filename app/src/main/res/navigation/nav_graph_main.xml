@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/fragFirst"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragFirst"
+        android:name="com.haichenyi.mvvm.ui.frag.FragFirst"
+        android:label="FragFirst">
+        <action
+            android:id="@+id/action_fragFirst_to_fragSecond"
+            app:destination="@id/fragSecond"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragSecond"
+        android:name="com.haichenyi.mvvm.ui.frag.FragSecond"
+        android:label="FragSecond">
+        <action
+            android:id="@+id/action_fragSecond_to_fragThird"
+            app:destination="@id/fragThird"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+        <action
+            android:id="@+id/action_up_1"
+            app:popUpTo="@id/fragFirst"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragThird"
+        android:name="com.haichenyi.mvvm.ui.frag.FragThird"
+        android:label="FragThird">
+        <action
+            android:id="@+id/action_fragThird_to_fragFirst"
+            app:destination="@id/fragFirst"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+        <action
+            android:id="@+id/action_up_to_1"
+            app:popUpTo="@id/fragFirst"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+    </fragment>
+</navigation>
